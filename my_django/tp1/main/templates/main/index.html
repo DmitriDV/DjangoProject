@@ -1,0 +1,20 @@
+{% extends 'main/baseCode.html' %}
+
+{% block title %} 
+{{ title }}
+{% endblock %}
+
+{% block content %} 
+    <h1>Les tâches</h1>
+    {% if tasks %} <!--Cheking the presence of the tasks--> 
+        {% for element in tasks %}
+            <div class="">
+                <h3>{{ element.title }}</h3>
+                <p>{{ element.task }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Il n'a pas de tâches</p>
+    {% endif %}
+{% endblock %}
+  
