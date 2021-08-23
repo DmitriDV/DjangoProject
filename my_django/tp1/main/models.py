@@ -1,7 +1,7 @@
 from django.db import models
 
 class Task(models.Model):
-    title = models.CharField('Titre', max_length=100)
+    title = models.CharField('Titre', max_length=200)
     task = models.TextField('Description')
 
     class Meta:

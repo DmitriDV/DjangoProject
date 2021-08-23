@@ -5,13 +5,15 @@ Création de tâches
 {% endblock %}
 
 {% block content %} 
-    <h1>La création de tâches</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.title }}<br><br>
-        {{ form.task }}<br>
-        <button type="submit" class="btn btn-success">Ajouter</button>
-        <span>{{ error }}</span>
-    </form>
+
+        <h1>La création de tâches</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br><br>
+            {{ form.task }}<br>
+            <button type="submit" class="btn btn-success">Ajouter</button>
+            <span>{{ error }}</span>
+        </form>
+   
 {% endblock %}
     

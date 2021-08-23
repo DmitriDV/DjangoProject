@@ -6,15 +6,21 @@
 
 {% block content %} 
     <h1>Les tâches</h1>
-    {% if tasks %} <!--Cheking the presence of the tasks--> 
-        {% for element in tasks %}
-            <div class="">
-                <h3>{{ element.title }}</h3>
-                <p>{{ element.task }}</p>
-            </div>
-        {% endfor %}
-    {% else %}
-        <p>Il n'a pas de tâches</p>
-    {% endif %}
+    <table>
+        <tr>
+            <th>Tâche</th>
+            <th>Description</th>
+        </tr>
+            {% if tasks %} <!--Cheking the presence of the tasks--> 
+                {% for element in tasks %}
+                    <tr>
+                        <td><h4>{{ element.title }}</h4></td>
+                        <td><p>{{ element.task }}</p></td>
+                    </tr>
+                {% endfor %}
+                {% else %}
+                    <p>Il n'a pas de tâches</p>
+            {% endif %}
+    </table>
 {% endblock %}
   
