@@ -13,10 +13,13 @@
         <nav class="header__navigation">
             <ul class="menu">
                 <li>
-                    <a class="" href="{% url 'homePage' %}">Accueil</a>
+                    <a class="" href="{% url 'homePage' %}">Panneau des tâches</a>
                 </li>
                 <li>
-                    <a class="" href="{% url 'aboutUsPage' %}">À propos de nous</a>
+                    <a class="" href="{% url 'create' %}">Créer une tâche</a>
+                </li>
+                <li>
+                    <a class="" href="{% url 'aboutUsPage' %}">Description de projet</a>
                 </li>
             </ul>
         </nav>
@@ -30,7 +33,7 @@
         </div>
         {% block content %} {% endblock %}
 
-        <a class="" href="{% url 'create' %}">Créer une tâche</a>
+        
         
     
         <!--Footer-->
