@@ -16,6 +16,9 @@
                     <a class="" href="{% url 'homePage' %}">Accueil</a>
                 </li>
                 <li>
+                    <a class="" href="{% url 'create' %}">Créer une tâche</a>
+                </li>
+                <li>
                     <a class="" href="{% url 'aboutUsPage' %}">À propos de nous</a>
                 </li>
             </ul>
@@ -30,7 +33,7 @@
         </div>
         {% block content %} {% endblock %}
 
-        <a class="" href="{% url 'create' %}">Créer une tâche</a>
+        
         
     
         <!--Footer-->
