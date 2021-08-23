@@ -4,7 +4,7 @@ from .forms import TaskForm
 
 def index(request):
     #tasks = Task.objects.all() - all objects
-    tasks = Task.objects.order_by('-id') [:3] # 3 objects on the page will sorted by id from old to new.
+    tasks = Task.objects.order_by('-id') [:7] # 7 objects on the page will sorted by id from old to new.
     return render(request, 'main/index.html', {'title': "Page Accueil", 'tasks': tasks})
 
 def about(request):
